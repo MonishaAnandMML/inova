@@ -1,0 +1,40 @@
+diff --git a/profile_store/route.profile b/profile_store/route.profile
+index 1ae3edf..849b0f9 100644
+--- a/profile_store/route.profile
++++ b/profile_store/route.profile
+@@ -1,7 +1,7 @@
+ %% { Route ID, [ Route ID Type,Routing Priority ,Routing Method, Base Route ID, SmartEdge ID, Processor ID, [ { Network ID, [ Supported Transactions, Supported Merchant Category Codes, Service Access Code, Opted Business Services, STIP Setup ID ] } ], Assured Transaction Response, Not Receive Forward Referrals, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+ %ABCBKABL001
+-{ <<"900001">>, [ issuer,0 ,"BASE", <<"0">>, <<"ABCBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"1">>, [<<"356001">>], [<<"mod10_check">>, <<"pan_length_check">>], no ] } ,{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"1">>, [<<"356001">>], [mod10_check, pan_length_check], no ] } ], 500, 'no', 'no', 20000, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
++{ <<"900001">>, [ issuer,0 ,"BASE", <<"0">>, <<"ABCBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"1">>, [<<"0F0A01">>], [<<"mod10_check">>, <<"pan_length_check">>], no ] } ,{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"1">>, [<<"0F0A01">>], [mod10_check, pan_length_check], no ] } ], 500, 'no', 'no', 20000, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+ { <<"900011">>, [ issuer,1 ,"ATM_TXN", <<"900001">>, <<"ABCBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"6">>, [<<"356001">>], [<<"mod10_check">>, <<"pan_length_check">>], no ] } ,{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"1">>, [<<"356001">>], [<<"mod10_check">>, <<"pan_length_check">>], no ] } ], 'no', 'no', effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+@@ -25,7 +25,7 @@
+ 
+ 
+ 
+-{ <<"900004">>, [ acquirer,0, "BASE", <<"0">>, <<"PQRBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"4">>, [<<"356001">>], [], no ] },{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"4">>, [<<"356001">>], [], no ] } ], 500, 'no', 'no', 20000,  effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
++{ <<"900004">>, [ acquirer,0, "BASE", <<"0">>, <<"PQRBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"4">>, [<<"0F0A01">>], [], no ] },{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"4">>, [<<"0F0A01">>], [], no ] } ], 500, 'no', 'no', 20000,  effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+ 
+ { <<"900444">>, [ processor,0, "BASE", <<"900004">>, <<"PQRBKABL001">>, <<"0">>,[ {<<"1">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_1.profile',<<"8">>, [<<"356001">>], [], no ] },{<<"2">>, [  'tran_type_to_key_fields.profile','mcc_for_network_id_2.profile', <<"8">>, [<<"356001">>], [], no ] } ], 500, 'no', 'no', 20000,  effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] } .
+diff --git a/profile_store/se_entity.profile b/profile_store/se_entity.profile
+index ca3e965..d9a9e79 100644
+--- a/profile_store/se_entity.profile
++++ b/profile_store/se_entity.profile
+@@ -1,10 +1,10 @@
+ %% { SE ID, [ Entity Name, Legal Address, Country, Address for Communication, Official Website, Processing Capacity Limit, SDCM state,Authorised signatory: { sign_authority, Name, Designation, Business Unit/Department, Contact No, Email}, contact_matrix: [{ Contact Type, Name, Designation, Business Unit/Department, Contact No, Email},..], base_currency_list:[ default_Currency_code_numeric, supported_Currency_code_numeric, ...], margin_percentage, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp}}}}.
+ 
+-{ <<"ABCBKABL001">>, [ "ABC", "12-b-street", <<"356">>, "ABC-12-b-street-356", "www.abcbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
++{ <<"ABCBKABL001">>, [ "ABC", "12-b-street", <<"840">>, "ABC-12-b-street-356", "www.abcbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], [<<"356">>], 0.0, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+-{ <<"XYZBKABL001">>, [ "XYZ", "13-b-street", <<"356">>, "XYZ-13-b-street-356", "www.xyzbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
++{ <<"XYZBKABL001">>, [ "XYZ", "13-b-street", <<"356">>, "XYZ-13-b-street-356", "www.xyzbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], [<<"356">>], 0.0, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+-{ <<"PQRBKABL001">>, [ "PQR", "14-b-street", <<"356">>, "PQR-14-b-street-356", "www.pqrbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
++{ <<"PQRBKABL001">>, [ "PQR", "14-b-street", <<"356">>, "PQR-14-b-street-356", "www.pqrbank.com", 10000, yes,{ sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], [<<"356">>], 0.0, effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.
+ 
+ %%%
+ { <<"BOABKABL001">>, [ "BOA", "Karuna Close", <<"356">>, "BOA-Karuna Close-356", "www.bank-of-africa.net", 10000, yes, { sign_authority, "vishakha", "xyz", "abc", "pqr", "mno" }, [ { technical, "vishakha", "xyz", "abc", "pqr", "mno" } ], effective_datetimestamp, is_active, is_blocked, is_deleted, activation_datetimestamp, creation_datetimestamp, modify_datetimestamp, delete_datetimestamp, expiry_datetimestamp ] }.

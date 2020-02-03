@@ -1,0 +1,27 @@
+
+rr(se_dal).
+
+Rec1 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"356">>, <<"840">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec2 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"702">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec3 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"392">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec4 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"840">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec5 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"414">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec6 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"978">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+Rec7 = #se_datastore_record{ bucket_type = <<"se_txn_store">>, bucket_name = <<"se_currency_master">>, bucket_datatype = undefined,key = {<<"20200124">>, <<"980">>, <<"356">>, <<"MONEX">>}, value = {0.014133277, 0.014521165, 0.014327221} }.
+
+
+se_dal:store_in_datastore([Rec1, Rec2, Rec3, Rec4, Rec5, Rec6, Rec7]).
+
+
+
+
+
+
+
+
