@@ -1,0 +1,84 @@
+
+#Fees and charges
+
+@FCValid_Scenerio_Fees_and_charge_POS_Transaction_CP_transaction and CNP
+
+
+  Scenario Outline: Interchange fee calculation for TandE transactions with different Amount PosData and BusinessZoneCode
+   
+   Given Validation of scenario <TestCaseId> for tran type "00" and CardNumber <CardNumber>
+    Given Initiate TandE transaction with PosDataCode as "110101500300" CardNumber <CardNumber> TranType "00" mcc <MerchantCategoryCode> Networkid as "1" Amount <Amount> <trackdata1> <trackdata2> <PINdata> <Securitydata> 
+    When  Acquirer forwards the message to SmartEdge
+    And   Message is processed by issuer and repsonse is sent back to the acquirer
+    Then  Verify this acquirer's <TestCaseId> received "000" <BusinessZoneCode> <feeRuleID> and <feeAmount>
+    
+    Examples: 
+    	  	  
+    |TestCaseId                                     | CardNumber         |MerchantCategoryCode |  Amount    |trackdata1      | trackdata2   |PINdata    |Securitydata  |BusinessZoneCode |feeRuleID|feeAmount|
+ 
+
+    |"FCIFSCV1TC5VISAPurcResp"                      |"2220160000000002"  | "3501"              | "20502"    |  "TrackData1"  |"TrackData2"  |"PINData"  |"SecData"     |   "356001"     |  "2080" |  "502"  |
+
+
+
+
+   ATM
+@FCValid_Scenerio_Fees_and_charge_POS_Transaction_Cash
+     
+     Scenario Outline: Interchange fee calculation for Purchase transactions with different Amount PosData and BusinessZoneCode
+     
+    Given Validation of scenario <TestCaseId> for tran type "01" and CardNumber <CardNumber>
+    Given Initiate cash transaction with PosDataCode as "111001010100" CardNumber <CardNumber> TranType "01" mcc <MerchantCategoryCode> Networkid as "1" Amount <Amount> trackDataOne "TrackData1" trackDataTwo "TrackData2" PINdata "PINData" Securitydata "SecData"                                                      
+    When  Acquirer forwards the message to SmartEdge
+    And   Message is processed by issuer and repsonse is sent back to the acquirer
+    Then  Verify this acquirer's <TestCaseId> received "000" <BusinessZoneCode> <feeRuleID> and <feeAmount>
+    
+    Examples: 
+    
+    |TestCaseId                                     | CardNumber         |MerchantCategoryCode |  Amount    |BusinessZoneCode |feeRuleID|feeAmount|
+   
+     |"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "99999"    |   "356001"     |  "2197" |  "200"  |
+     #|"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "99999"    |   "356001"     |  "2197" |  "200"  |
+     #|"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "20502"    |   "356001"     |  "2197" |  "200"  |
+     #|"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "20502"    |   "356001"     |  "2197" |  "200"  |
+     #|"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "99999"    |   "356001"     |  "2197" |  "200"  |
+     #|"FCIFSCV1TC25VISAPurcResp"                     |"2220160000000010"  | "6010"              | "99999"    |   "356001"     |  "2197" |  "200"  |
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Tansaction Classification Notworking
+|TestCaseId           |TranType   |TransactionClassification                          | CardNumber         |MerchantCategoryCode    |TrackData          | PINData      |Pos1 | Pos2  |Pos4  | Pos5  | Pos6 | Pos7 | Pos8 | Pos10 |TransactionCode|
+|"TRNCLSTC70" | "00"  |"ONPREMISE_UNATTN_FUEL  |"2220118912341518"  |"5621"                  |"TrackData"        | "PINData"    | "0" |"0"    |"2"   | "0"   |  "1" | "0"  | "0"  |   "0" |  "3900" |
+
+
+|"TRNCLSTC71"         | "00"      |"MAG_ONPREMISE_UNATTN_FUEL" |"2220118912341518"  |"5621"     |"TrackData"        | "PINData"    | "2" |"0"    |"2"   | "0"   |  "1" | "2"  | "1"  |   "3" |  "4000" |
+
+
+|"TRNCLSTC72"         | "00"      |"CHIP_ONPREMISE_UNATTN_FUEL" |"2220118912341518"  |"5621"                  |"NoTrackData"        | "NoPINData"    | "5" |"0"    |"2"   | "0"   |  "9" | "1"  | "1"  |   "3" | "4100" |
+
+
+|"TRNCLSTC76"         | "00"      |"DEF_CARD_PRESENT" |"2220118912341518"|"5192"                  |"NoTrackData"      | "NoPINData"  | "1" |"1"    |"1"   | "0"   |  "0" | "1"  | "0"  |   "1" |         "4400" |
+
+
+|"TRNCLSTC76"         | "00"      |"CARD_NOT_PRESENT" |"2220118912341518"  |"5192"                  |"NoTrackData"      | NoPINData"  | "1" |"1"    |"1"   | "0"   |  "0" | "5"  | "0"  |   "3" |         "4500" |
+
+
+|"TRNCLSTC76"         | "00"      |"CARD_NOT_PRESENT_STANDIN"|"2220118912341518"|"5621"                  |"TrackData"      | "PINData"  | "5" |"1"    |"5"   | "0"   |  "1" | "5"  | "1"  |   "3" |         "4600" |
+
+
+|"TRNCLSTC76"         | "01"      |"DEF_CARD_PRESENT"|"2220118912341518"  |"6010"                  |"TrackData"      | "PINData"  | "0" |"0"    |"5"   | "0"   |  "0" | "0"  | "0"  |   "0" |      "5300" |
+
+

@@ -1,0 +1,147 @@
+Bring up the services in the following order
+ 
+
+1.se_services
+2.se_endpoint_handler
+3.se_message_processor
+
+In se_testing go to CommonTest and run this command to create a Virtual IP sh create_virtual_IP.sh
+
+runnig se_services
+
+1.rm -rf _build
+
+3.rebar3 unlock
+
+4.sh pre_compile.sh
+
+5.rebar3 compile
+
+6.rebar3 release
+
+7. check if riak is running sudo riak ping< start using sudo riak start if not running>
+
+8.start HSM  mono ThalesConsoleSimulator.exe going into the particular folder
+
+9._build/default/rel/se_services/bin/se_services console
+
+
+
+starting se_endpoint_handler
+
+1.go into se_gateway and se_endpoint_handler 
+
+2. rm -rf _build
+
+3.rebar3 unlock
+
+4.sh pre_compile.sh
+
+5.rebar3 compile
+
+6.rebar3 release
+
+7._build/default/rel/se_endpoint_handler/bin/se_endpoint_handler console
+
+
+
+starting se_message_processor
+
+1.go into se_gateway and se_message_processor
+
+2. rm -rf _build
+
+3.rebar3 unlock
+
+4.sh pre_compile.sh
+
+5.rebar3 compile
+
+6.rebar3 release
+ 
+7._build/default/rel/se_message_processor/bin/se_message_processor console
+
+
+
+
+Steps for Se_Formatter_convertor
+
+Firstly go to the Se_Formatter_convertor and use the following steps. 
+
+1.sh set_env_formatter.sh(run only once, it will create a folder in opt/se_platform/se_formatter  in that it will create a 3 folders -zipout ,input_template,for_packaging)
+
+2.rebar3 compile
+
+3.rebar3 release
+
+4.sudo ./_build/default/rel/se_formatter_converter/bin/se_formatter_converter console
+
+
+
+to go back and see about commit details like who when and what and the issue that they have worked on you can use this command in your terminal and check git log particular profile location that you want to see
+
+
+
+
+    utils.isUserTokenValid(usertoken, username).then(function (response) {
+crud.listAllCollectionWithCondition(profileName, userseid, condition).then(function (response) {
+
+
+
+ Steps to take back up and paste it back if you not in a right branch and you dont want to repeat the work that you have already done (Switching the branches without loosing your data)
+
+  570  git status
+  571  git diff >
+  572  git diff > ~/formats.diff
+  573  vim ~/formats.diff 
+  574  mkdir ~/bkups
+  575  cp se_formatter_converter/input_format_templates/*.format se_formatter_converter/src/json_to_se_erlang.erl ~/bkups/
+  576  git checkout se_formatter_converter/input_format_templates/*
+  577  git status
+  578  git checkout se_formatter_converter/src/json_to_se_erlang.erl
+  579  git status
+  580  git checkout 210-conversion-from-json-to-erlang-should-work-in-se-platform 
+  581  git pull
+  582  git ~/formats.diff
+  583  git apply ~/formats.diff
+  584  vi se_formatter_converter/input_format_templates/account_range.format 
+  585  cd se_formatter_converter/
+  586  git apply ~/formats.diff
+  587  vi ~/formats.diff 
+  588  git apply ~/formats.diff
+  589  cp ~/bkups/*.format input_format_templates/
+  590  git status
+  591  cp ~/bkups/json_to_se_erlang.erl src/
+  592  git status
+  593  git diff
+  594  git status
+  595  git commit -a
+
+
+
+
+SIMPOS_UI IP ADRESS : 13.58.115.220/8443
+
+
+
+
+This is the command to copy a directory from AWS server and paste it in local : scp -r -i se_security.pem centos@18.223.79.34:/tmp/dump ~/Desktop/
+
+
+We need optional field categoriazation also so that we dont fail processing on a optional field validation.(raise a bug)
+
+
+
+
+Running JSON to MD Converter
+
+SUD0udo jsonschema2md -d examples/schemas -o examples/docs -v '06'
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+1.currencies that to be scoped ?
+
+COUNTRY OF CURRENCIES SCOPED :
+
+JAPANESE;; - Has Zero currency exponent 392 0F
+EUROPE; - major currency .. currency exponent ?  276 -GERMANY  -0E
+UKRAINE; - minor currency .. 804 -0E
+US,  - most  popular - 840 -0A
+KUWAIT - currency exponent of 3 414 -0D
+
+CURRENCIES:
+
+* 840 -0A  - US
+* 356 -0F  - INDIA
+* 392 -0F  - JAPAN
+* 414 -0D  - KUWAIT
+* 276 -0E  - GERMANY 
+* 804 -0E  - UKRAINE
+
+
+      COUNTRY OF ACQ             COUNTRY OF ISS         SA CODE        SA SCOPE   
+         392 -0F                    356 -0F             0F0001         REGIONAL
+         414 -0E                    804 -0E             0D0001         REGIONAL
+         840 -0A                    804 -0E             0A0E01       INTER-REGIONAL
+         840 -0A                    356 -0F             0A0F01       INTER-REGIONAL
+         804 -0E                    356 -0F             0E0F01       INTER-REGIONAL
+         276 -0E                    840 -0A             0E0A01       INTER-REGIONAL
+         414 -0D                    276 -0E             0D0E01       INTER-REGIONAL
+         356 -0F                    840 -0A             0F0A01       INTER-REGIONAL
+        
+         
+         
+         
+
+
+2.Acq/ISS combinations ?
+
+          ACQUIRER                            ISSUER
+      * PQRBKABL012 - 392 - 0F           ABCBKABL010 -356 -0F
+      * PQRBKABL008 - 414 - 0E           ABCBKABL011 -804 -0E  
+      * PQRBKABL011 - 840 - 0A           ABCBKABL011 -804 -0E  
+      * PQRBKABL011 - 840 - 0A           ABCBKABL010 -356 -0F
+      * PQRBKABL010 - 804 - 0E           ABCBKABL010 -356 -0F  
+      * PQRBKABL009 - 276 - 0E           ABCBKABL004 -840 -0A  
+      * PQRBKABL008 - 414 - 0D           ABCBKABL008 -276 -0E 
+      * PQRBKABL004 - 356 - 0F           ABCBKABL004 -840 -0A                  
+
+
+
+3.Margin percentage on/Off Logic  ?
+  
+MARGIN PERCENTAGE : 
+
+* 0.0% - OFF MODE
+* OTHER THAN 0.0 ANYTHING WOULD BE ON LOGIC  - ON MODE [ EX : 2.9%, 0.1%  ]
+
+
+4.Buy rate /Sell Rate Pick Logic Based on TranType (Purchase,Purchase Resp,Reversal, Reversal Resp)  ?
+
+                    FROM   TO
+
+PURCHASE REQ :      CR     DR    SELL RATE
+
+
+PURCHASE RESP :     DR     CR    BUY RATE
+
+
+REVERSAL REQ :
+
+REVERSAL RESP :  
+
+
+
+5.ACq/ISS Entity with Minor currencies ?
+
+
+EUROPE; - major currency .. currency exponent ?  276 -GERMANY  -0E
+UKRAINE; - minor currency .. 804 -0E
+
+
+
+
+6.Network/ACQ/ISS settlement Amount calculation
+
+DE 49 CURRENCY CONVERTION CODE : if this code is not the for the below then the convertion happens.
+
+  * SOURCE-SETTLEMENT-AMOUNT      - se_entity .profile
+  * DESTINATION-SETTLEMENT-AMOUNT - se_entity .profile
+  * NETWORK-SETTLEMENT-AMOUNT     - network .profile
+  * BILLING-AMOUNT                - account Range .profile
+
+   
+
+          CURRENCY-CONVERSION-PROCESS:
+
+   COVERTED RATE : (AMOUNT * BUY/SELL RATE)  + MARGIN RATE
+
+   CONVERTED AMOUNT : (AMOUNT * BUY/SELL RATE)
+       
+   MARGIN RATE : [ CONVERTED AMOUNT * MARGIN PERCENTAGE)]/100
+
+
+
+7.Currency Exponent (for 1,5 points)
+
+   100 - 10^2
+
+JAPANESE;; - Has Zero currency exponent 392 0F
+EUROPE; - major currency .. currency exponent ?  276 -GERMANY  -0E
+UKRAINE; - minor currency .. 804 -0E
+US,  - most  popular - 840 -0A
+KUWAIT - currency exponent of 3 414 -0D
+
+
+8.checking Multiple settlement Dates
+
+  POST DATE  : CURRENCY RATE 
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :[01mHP Linux Imaging and Printing System (ver. 3.19.5)[0m
+hplip-install[17942]: info: :[01mHPLIP Installer ver. 5.1[0m
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :Copyright (c) 2001-18 HP Development Company, LP
+hplip-install[17942]: info: :This software comes with ABSOLUTELY NO WARRANTY.
+hplip-install[17942]: info: :This is free software, and you are welcome to distribute it
+hplip-install[17942]: info: :under certain conditions. See COPYING file for more details.
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :Installer log saved in: [01mhplip-install_Mon-10-Jun-2019_17:23:22.log[0m
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :
+note: Defaults for each question are maked with a '*'. Press <enter> to accept the default.
+error: Auto installation is not supported for 'centos' distro so all dependencies may not be installed. 
+Please install manually as mentioned in 'http://hplipopensource.com/hplip-web/install/manual/index.html' web-site
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :[01mINSTALLATION MODE[0m
+hplip-install[17942]: info: :[01m-----------------[0m
+hplip-install[17942]: info: :Automatic mode will install the full HPLIP solution with the most common options.
+hplip-install[17942]: info: :Custom mode allows you to choose installation options to fit specific requirements.
+error: Please enter 'a', 'c', 'q' or press <enter> for the default of 'a'.
+error: Please enter 'a', 'c', 'q' or press <enter> for the default of 'a'.
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :[01mINTRODUCTION[0m
+hplip-install[17942]: info: :[01m------------[0m
+hplip-install[17942]: info: :This installer will install HPLIP version 3.19.5 on your computer.
+hplip-install[17942]: info: :Please close any running package management systems now (YaST, Adept, Synaptic, Up2date, etc).
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :[01mDISTRO/OS CONFIRMATION[0m
+hplip-install[17942]: info: :[01m----------------------[0m
+hplip-install[17942]: info: :Distro appears to be CentOS 7.6.1810.
+
+hplip-install[17942]: info: :
+Initializing. Please wait...
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :
+hplip-install[17942]: info: :[01mENTER ROOT/SUPERUSER PASSWORD[0m
+hplip-install[17942]: info: :[01m-----------------------------[0m
+error: Password incorrect. 2 attempt(s) left.
+error: Password incorrect. 1 attempt(s) left.
+error: Password incorrect. 
+error: 3 incorrect attempts. (or) Insufficient permissions(i.e. try with sudo user).
+Exiting.

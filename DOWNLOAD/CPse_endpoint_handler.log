@@ -1,0 +1,219 @@
+2019-06-03 16:32:12.852 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.852 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1074.0>
+2019-06-03 16:32:12.852 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1352>,tls_connection,<0.746.0>},<0.1073.0>}
+2019-06-03 16:32:12.876 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.876 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1076.0>
+2019-06-03 16:32:12.876 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1354>,tls_connection,<0.746.0>},<0.1075.0>}
+2019-06-03 16:32:12.877 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.877 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1078.0>
+2019-06-03 16:32:12.877 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1355>,tls_connection,<0.746.0>},<0.1077.0>}
+2019-06-03 16:32:12.880 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.880 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1080.0>
+2019-06-03 16:32:12.880 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1356>,tls_connection,<0.746.0>},<0.1079.0>}
+2019-06-03 16:32:12.882 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.882 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1082.0>
+2019-06-03 16:32:12.882 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1357>,tls_connection,<0.746.0>},<0.1081.0>}
+2019-06-03 16:32:12.883 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:12.884 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1084.0>
+2019-06-03 16:32:12.884 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1358>,tls_connection,<0.746.0>},<0.1083.0>}
+2019-06-03 16:32:12.948 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,10,2}, client port 34652
+2019-06-03 16:32:12.948 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,10,2}, server port 9001
+2019-06-03 16:32:12.948 [info] <0.1074.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,10,2}
+2019-06-03 16:32:12.949 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1085.0> "endpoint_sender_1"
+2019-06-03 16:32:12.949 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:12.950 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:12.950 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,1,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,49,53,48,49,49,49,51,52,55,55,0,4,0,9,1,49>>
+2019-06-03 16:32:12.950 [info] <0.1074.0>@message_processor_group_client:dispatch_message:24 PID <27956.833.0> RetVal ok
+2019-06-03 16:32:12.950 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:12.974 [info] <0.1085.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,1,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,49,53,48,49,49,49,51,52,55,55,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:12.974 [info] <0.1085.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 23546
+2019-06-03 16:32:12.974 [info] <0.1085.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.025 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,12,4}, client port 48110
+2019-06-03 16:32:13.025 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,12,4}, server port 9001
+2019-06-03 16:32:13.025 [info] <0.1076.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,12,4}
+2019-06-03 16:32:13.030 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1086.0> "endpoint_sender_5"
+2019-06-03 16:32:13.030 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.030 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:13.031 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,5,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,57,56,49,54,54,53,48,56,52,49,0,4,0,9,1,49>>
+2019-06-03 16:32:13.031 [info] <0.1076.0>@message_processor_group_client:dispatch_message:24 PID <27956.838.0> RetVal ok
+2019-06-03 16:32:13.031 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.087 [info] <0.1086.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,5,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,57,56,49,54,54,53,48,56,52,49,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:13.087 [info] <0.1086.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 56643
+2019-06-03 16:32:13.088 [info] <0.1086.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.137 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,13,5}, client port 40498
+2019-06-03 16:32:13.137 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,13,5}, server port 9001
+2019-06-03 16:32:13.137 [info] <0.1078.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,13,5}
+2019-06-03 16:32:13.138 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1087.0> "endpoint_sender_6"
+2019-06-03 16:32:13.138 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.139 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:13.139 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,6,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,49,55,51,53,49,57,57,48,50,56,0,4,0,9,1,49>>
+2019-06-03 16:32:13.139 [info] <0.1078.0>@message_processor_group_client:dispatch_message:24 PID <27956.842.0> RetVal ok
+2019-06-03 16:32:13.139 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.163 [info] <0.1087.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,6,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,49,55,51,53,49,57,57,48,50,56,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:13.163 [info] <0.1087.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 24450
+2019-06-03 16:32:13.163 [info] <0.1087.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.213 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,11,3}, client port 51602
+2019-06-03 16:32:13.213 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,11,3}, server port 9001
+2019-06-03 16:32:13.213 [info] <0.1080.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,11,3}
+2019-06-03 16:32:13.215 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1088.0> "endpoint_sender_2"
+2019-06-03 16:32:13.215 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.215 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:13.215 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,2,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,49,49,51,48,50,48,56,57,50,52,0,4,0,9,1,49>>
+2019-06-03 16:32:13.215 [info] <0.1080.0>@message_processor_group_client:dispatch_message:24 PID <27956.837.0> RetVal ok
+2019-06-03 16:32:13.215 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.241 [info] <0.1088.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,2,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,49,49,51,48,50,48,56,57,50,52,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:13.242 [info] <0.1088.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 26485
+2019-06-03 16:32:13.243 [info] <0.1088.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.288 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,17,9}, client port 34022
+2019-06-03 16:32:13.288 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,17,9}, server port 9001
+2019-06-03 16:32:13.288 [info] <0.1082.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,17,9}
+2019-06-03 16:32:13.289 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1089.0> "endpoint_sender_18"
+2019-06-03 16:32:13.289 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.289 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:13.289 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,24,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,57,54,51,56,57,55,54,49,50,51,0,4,0,9,1,49>>
+2019-06-03 16:32:13.289 [info] <0.1082.0>@message_processor_group_client:dispatch_message:24 PID <27956.841.0> RetVal ok
+2019-06-03 16:32:13.289 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.311 [info] <0.1089.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,24,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,57,54,51,56,57,55,54,49,50,51,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:13.311 [info] <0.1089.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 21862
+2019-06-03 16:32:13.311 [info] <0.1089.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.361 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,22,14}, client port 60310
+2019-06-03 16:32:13.361 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,22,14}, server port 9001
+2019-06-03 16:32:13.361 [info] <0.1084.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,22,14}
+2019-06-03 16:32:13.364 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1090.0> "endpoint_sender_3"
+2019-06-03 16:32:13.364 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.365 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 82
+2019-06-03 16:32:13.365 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,17,0,0,3,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,1,0,0,8,1,57,57,49,52,56,57,52,51,50,53,53,49,0,4,0,9,1,49>>
+2019-06-03 16:32:13.366 [info] <0.1084.0>@message_processor_group_client:dispatch_message:24 PID <27956.839.0> RetVal ok
+2019-06-03 16:32:13.366 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.430 [info] <0.1090.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,132,3,0,0,1,0,0,1,0,0,3,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,1,0,0,8,1,57,57,49,52,56,57,52,51,50,53,53,49,0,0,0,4,0,9,1,1>>
+2019-06-03 16:32:13.430 [info] <0.1090.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 64639
+2019-06-03 16:32:13.430 [info] <0.1090.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.453 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:13.453 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1092.0>
+2019-06-03 16:32:13.454 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1359>,tls_connection,<0.746.0>},<0.1091.0>}
+2019-06-03 16:32:13.499 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,15,7}, client port 56282
+2019-06-03 16:32:13.499 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,15,7}, server port 9001
+2019-06-03 16:32:13.499 [info] <0.1092.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,15,7}
+2019-06-03 16:32:13.500 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1093.0> "endpoint_sender_11"
+2019-06-03 16:32:13.500 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.501 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 76
+2019-06-03 16:32:13.501 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,0,0,0,17,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56>>
+2019-06-03 16:32:13.501 [info] <0.1092.0>@message_processor_group_client:dispatch_message:24 PID <27956.842.0> RetVal ok
+2019-06-03 16:32:13.501 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.525 [info] <0.1093.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,120,3,0,0,1,0,0,1,0,0,17,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56,0,0>>
+2019-06-03 16:32:13.525 [info] <0.1093.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 24662
+2019-06-03 16:32:13.526 [info] <0.1093.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.529 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:13.529 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1095.0>
+2019-06-03 16:32:13.529 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1360>,tls_connection,<0.746.0>},<0.1094.0>}
+2019-06-03 16:32:13.577 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,23,15}, client port 57416
+2019-06-03 16:32:13.577 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,23,15}, server port 9001
+2019-06-03 16:32:13.577 [info] <0.1095.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,23,15}
+2019-06-03 16:32:13.580 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1096.0> "endpoint_sender_23"
+2019-06-03 16:32:13.581 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.581 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 76
+2019-06-03 16:32:13.582 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,0,0,0,35,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56>>
+2019-06-03 16:32:13.582 [info] <0.1095.0>@message_processor_group_client:dispatch_message:24 PID <27956.839.0> RetVal ok
+2019-06-03 16:32:13.582 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.665 [info] <0.1096.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,120,3,0,0,1,0,0,1,0,0,35,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56,0,0>>
+2019-06-03 16:32:13.666 [info] <0.1096.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 83485
+2019-06-03 16:32:13.666 [info] <0.1096.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.673 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:32:13.673 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1098.0>
+2019-06-03 16:32:13.673 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1361>,tls_connection,<0.746.0>},<0.1097.0>}
+2019-06-03 16:32:13.723 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,24,16}, client port 33062
+2019-06-03 16:32:13.723 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,24,16}, server port 9001
+2019-06-03 16:32:13.723 [info] <0.1098.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,24,16}
+2019-06-03 16:32:13.724 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1099.0> "endpoint_sender_24"
+2019-06-03 16:32:13.724 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.724 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 76
+2019-06-03 16:32:13.725 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,0,0,0,36,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,1,0,8,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56>>
+2019-06-03 16:32:13.725 [info] <0.1098.0>@message_processor_group_client:dispatch_message:24 PID <27956.837.0> RetVal ok
+2019-06-03 16:32:13.725 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.748 [info] <0.1099.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<0,120,3,0,0,1,0,0,1,0,0,36,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,16,0,0,1,0,10,0,0,0,8,1,57,57,50,48,55,49,53,51,51,52,56,56,0,0>>
+2019-06-03 16:32:13.748 [info] <0.1099.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 23786
+2019-06-03 16:32:13.749 [info] <0.1099.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:13.853 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 332
+2019-06-03 16:32:13.853 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,0,0,0,17,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,112,52,7,65,41,232,152,0,22,34,32,22,0,0,0,0,2,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,34,6,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,37,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,51,55,56,50,57,56,50,51,48,48,49,50,51,52,53,54,55,56,57,63,70,57,57,57,56,52,56,54,49,51,48,54,56,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,120,37,66,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,68,65,84,69,83,47,71,76,79,86,69,83,32,32,32,83,81,85,65,84,32,32,32,32,32,32,32,32,32,32,32,32,94,51,55,56,50,57,56,50,51,48,48,49,48,63,70,48,52,51,48,48,48,48,48,51,48,48,48,8,64,181,10,170,158,15,77,72,182,48,49,48,49,48,49,48,49,48,49>>
+2019-06-03 16:32:13.853 [info] <0.1092.0>@message_processor_group_client:dispatch_message:24 PID <27956.841.0> RetVal ok
+2019-06-03 16:32:13.854 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:32:13.992 [info] <0.1085.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<4,2,3,0,0,1,0,0,1,0,0,1,0,0,17,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,51,151,0,4,19,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,112,54,7,65,41,237,152,0,22,34,32,22,0,0,0,0,2,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,34,6,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,37,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,51,55,56,50,57,56,50,51,48,48,49,50,51,52,53,54,55,56,57,63,70,57,57,57,56,52,56,54,49,51,48,54,56,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,119,37,66,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,68,65,84,69,83,47,71,76,79,86,69,83,32,32,32,83,81,85,65,84,32,32,32,32,32,32,32,32,32,32,32,32,94,51,55,56,50,57,56,50,51,48,48,49,48,63,70,48,52,51,48,48,48,48,48,51,48,48,0,20,50,55,48,49,44,50,55,48,51,44,50,55,49,49,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,55,51,51,57,55,48,48,48,48,53,55,54,53,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64,4,167,135,126,38,228,248,253,48,49,48,49,48,49,48,49,48,49>>
+2019-06-03 16:32:13.992 [info] <0.1085.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 138367
+2019-06-03 16:32:13.992 [info] <0.1085.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:29.048 [info] <0.1085.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<3,24,3,0,0,1,0,0,1,0,0,1,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,51,151,0,4,19,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,32,112,50,7,69,11,225,129,0,22,34,32,22,0,0,0,0,2,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,4,0,53,1,0,0,0,2,5,2,0,0,0,0,0,0,6,57,48,48,48,48,52,57,57,57,56,52,56,54,49,51,48,54,56,9,17,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,55,52,57,48,49,48,48,48,48,54,48,53,51,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64,0,84,0,1,4,0,0,2,6,57,48,48,48,48,52,0,3,57,57,57,56,52,56,54,49,51,48,54,56,0,4,49,50,51,52,53,54,55,56,0,5,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55>>
+2019-06-03 16:32:29.048 [info] <0.1085.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 15194388
+2019-06-03 16:32:29.048 [info] <0.1085.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:32:29.301 [info] <0.1093.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<2,113,3,0,0,1,0,0,1,0,0,17,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,51,151,0,4,19,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,16,112,50,7,65,11,229,128,0,22,34,32,22,0,0,0,0,2,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,57,57,56,52,56,54,49,51,48,54,56,9,17,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,0,25,50,53,49,48,44,50,55,48,49,44,50,55,48,51,44,50,55,49,49,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,55,51,51,57,55,48,48,48,48,53,55,54,53,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64>>
+2019-06-03 16:32:29.301 [info] <0.1093.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 15447697
+2019-06-03 16:32:29.302 [info] <0.1093.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:33:13.909 [error] <0.1076.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1354>,tls_connection,<0.746.0>},<0.1075.0>} :  closed
+2019-06-03 16:33:13.909 [info] <0.1076.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,12,4}
+2019-06-03 16:33:13.909 [info] <0.1076.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_5"
+2019-06-03 16:33:13.909 [info] <0.1086.0>@endpoint_sender_genserver:terminate:132 terminating <0.1086.0> because of normal
+2019-06-03 16:33:13.910 [error] <0.1076.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:33:13.921 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:43 got connection se_endpoint_handler
+2019-06-03 16:33:13.921 [info] <0.744.0>@se_endpoint_handler_ranch_protocol:start_link:45 Pid =<0.1103.0>
+2019-06-03 16:33:13.921 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:init:49 going to accept {sslsocket,{gen_tcp,#Port<0.1364>,tls_connection,<0.746.0>},<0.1102.0>}
+2019-06-03 16:33:13.927 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:89 Length 332
+2019-06-03 16:33:13.928 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:92 Message <<3,0,0,1,0,0,1,0,0,0,0,0,17,0,0,0,0,0,1,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,112,52,7,65,41,232,152,0,22,34,32,23,0,0,0,0,1,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,34,6,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,37,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,51,55,56,50,57,56,50,51,48,48,49,50,51,52,53,54,55,56,57,63,70,57,57,57,57,56,57,49,55,53,52,53,53,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,120,37,66,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,68,65,84,69,83,47,71,76,79,86,69,83,32,32,32,83,81,85,65,84,32,32,32,32,32,32,32,32,32,32,32,32,94,51,55,56,50,57,56,50,51,48,48,49,48,63,70,48,52,51,48,48,48,48,48,51,48,48,48,8,64,181,10,170,158,15,77,72,182,48,49,48,49,48,49,48,49,48,49>>
+2019-06-03 16:33:13.928 [info] <0.1092.0>@message_processor_group_client:dispatch_message:24 PID <27956.834.0> RetVal ok
+2019-06-03 16:33:13.928 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:33:13.980 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:get_client_ip_address:14 client ip {192,168,12,4}, client port 48134
+2019-06-03 16:33:13.981 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:get_server_ip_address:24 server ip {192,168,12,4}, server port 9001
+2019-06-03 16:33:13.981 [info] <0.1103.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,12,4}
+2019-06-03 16:33:13.983 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:create_sender_process:124 pid GlobalName <0.1104.0> "endpoint_sender_5"
+2019-06-03 16:33:13.983 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:loop:85 Transport ranch_ssl
+2019-06-03 16:33:14.020 [info] <0.1085.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<4,2,3,0,0,1,0,0,1,0,0,1,0,0,17,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,148,0,0,0,103,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,112,54,7,65,41,237,152,0,22,34,32,23,0,0,0,0,1,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,34,6,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,37,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,51,55,56,50,57,56,50,51,48,48,49,50,51,52,53,54,55,56,57,63,70,57,57,57,57,56,57,49,55,53,52,53,53,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,119,37,66,54,51,49,53,56,56,49,48,48,50,56,54,49,56,57,54,94,68,65,84,69,83,47,71,76,79,86,69,83,32,32,32,83,81,85,65,84,32,32,32,32,32,32,32,32,32,32,32,32,94,51,55,56,50,57,56,50,51,48,48,49,48,63,70,48,52,51,48,48,48,48,48,51,48,48,0,20,50,55,48,49,44,50,55,48,51,44,50,55,49,49,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,55,57,52,48,48,48,48,48,48,54,55,56,57,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64,4,167,135,126,38,228,248,253,48,49,48,49,48,49,48,49,48,49>>
+2019-06-03 16:33:14.020 [info] <0.1085.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 92094
+2019-06-03 16:33:14.020 [info] <0.1085.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:33:29.089 [info] <0.1085.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<3,24,3,0,0,1,0,0,1,0,0,1,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,148,0,0,0,103,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,32,112,50,7,69,11,225,129,0,22,34,32,23,0,0,0,0,1,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,4,0,53,1,0,0,0,2,5,2,0,0,0,0,0,0,6,57,48,48,48,48,52,57,57,57,57,56,57,49,55,53,52,53,53,9,17,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,56,48,57,48,52,48,48,48,48,54,57,52,57,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64,0,84,0,1,4,0,0,2,6,57,48,48,48,48,52,0,3,57,57,57,57,56,57,49,55,53,52,53,53,0,4,49,50,51,52,53,54,55,56,0,5,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55>>
+2019-06-03 16:33:29.089 [info] <0.1085.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 15161447
+2019-06-03 16:33:29.089 [info] <0.1085.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:33:29.345 [info] <0.1093.0>@endpoint_sender_genserver:send_data:151 Got msg from se_message_processor: <<2,113,3,0,0,1,0,0,1,0,0,17,153,153,153,0,0,0,0,0,1,0,0,16,0,0,0,1,35,25,21,67,151,148,0,0,0,103,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,16,112,50,7,65,11,229,128,0,22,34,32,23,0,0,0,0,1,0,0,0,0,0,0,2,5,2,18,52,86,24,3,32,1,1,1,25,6,3,49,49,48,49,48,49,53,48,48,51,48,48,0,0,2,0,53,1,6,57,48,48,48,48,52,57,57,57,57,56,57,49,55,53,52,53,53,9,17,2,1,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,56,49,50,51,52,53,54,55,84,69,83,84,78,65,77,69,32,79,70,32,77,69,82,67,72,65,78,84,49,50,51,77,85,77,66,65,73,88,88,88,88,88,88,88,77,72,73,78,0,25,50,53,49,48,44,50,55,48,49,44,50,55,48,51,44,50,55,49,49,0,80,0,1,35,49,50,51,49,57,49,53,52,51,57,55,57,52,48,48,48,48,48,48,54,55,56,57,0,5,1,78,0,17,1,77,0,18,6,51,53,54,48,48,49,0,23,4,52,52,48,48,8,64>>
+2019-06-03 16:33:29.345 [info] <0.1093.0>@endpoint_sender_genserver:send_data:155 Time taken by se gateway to process this request 15417718
+2019-06-03 16:33:29.346 [info] <0.1093.0>@endpoint_sender_genserver:send_data:162 Data sent to client: ok
+2019-06-03 16:34:13.999 [error] <0.1103.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1364>,tls_connection,<0.746.0>},<0.1102.0>} :  closed
+2019-06-03 16:34:13.999 [info] <0.1103.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,12,4}
+2019-06-03 16:34:13.999 [info] <0.1103.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_5"
+2019-06-03 16:34:14.000 [info] <0.1104.0>@endpoint_sender_genserver:terminate:132 terminating <0.1104.0> because of normal
+2019-06-03 16:34:14.000 [error] <0.1103.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.060 [error] <0.1095.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1360>,tls_connection,<0.746.0>},<0.1094.0>} :  closed
+2019-06-03 16:34:14.061 [info] <0.1095.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,23,15}
+2019-06-03 16:34:14.061 [info] <0.1095.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_23"
+2019-06-03 16:34:14.061 [error] <0.1082.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1357>,tls_connection,<0.746.0>},<0.1081.0>} :  closed
+2019-06-03 16:34:14.061 [info] <0.1096.0>@endpoint_sender_genserver:terminate:132 terminating <0.1096.0> because of normal
+2019-06-03 16:34:14.061 [info] <0.1082.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,17,9}
+2019-06-03 16:34:14.061 [info] <0.1082.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_18"
+2019-06-03 16:34:14.061 [error] <0.1092.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1359>,tls_connection,<0.746.0>},<0.1091.0>} :  closed
+2019-06-03 16:34:14.061 [error] <0.1074.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1352>,tls_connection,<0.746.0>},<0.1073.0>} :  closed
+2019-06-03 16:34:14.061 [info] <0.1092.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,15,7}
+2019-06-03 16:34:14.061 [info] <0.1074.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,10,2}
+2019-06-03 16:34:14.061 [info] <0.1074.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_1"
+2019-06-03 16:34:14.061 [info] <0.1092.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_11"
+2019-06-03 16:34:14.061 [error] <0.1078.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1355>,tls_connection,<0.746.0>},<0.1077.0>} :  closed
+2019-06-03 16:34:14.061 [info] <0.1078.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,13,5}
+2019-06-03 16:34:14.061 [info] <0.1078.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_6"
+2019-06-03 16:34:14.061 [info] <0.1093.0>@endpoint_sender_genserver:terminate:132 terminating <0.1093.0> because of normal
+2019-06-03 16:34:14.061 [error] <0.1095.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [info] <0.1085.0>@endpoint_sender_genserver:terminate:132 terminating <0.1085.0> because of normal
+2019-06-03 16:34:14.061 [info] <0.1089.0>@endpoint_sender_genserver:terminate:132 terminating <0.1089.0> because of normal
+2019-06-03 16:34:14.061 [error] <0.1092.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [error] <0.1080.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1356>,tls_connection,<0.746.0>},<0.1079.0>} :  closed
+2019-06-03 16:34:14.061 [error] <0.1084.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1358>,tls_connection,<0.746.0>},<0.1083.0>} :  closed
+2019-06-03 16:34:14.061 [error] <0.1074.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [info] <0.1087.0>@endpoint_sender_genserver:terminate:132 terminating <0.1087.0> because of normal
+2019-06-03 16:34:14.061 [info] <0.1084.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,22,14}
+2019-06-03 16:34:14.061 [info] <0.1080.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,11,3}
+2019-06-03 16:34:14.061 [info] <0.1080.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_2"
+2019-06-03 16:34:14.061 [info] <0.1084.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_3"
+2019-06-03 16:34:14.061 [error] <0.1098.0>@se_endpoint_handler_ranch_protocol:loop:102 Error while receiving length bytes on socket {sslsocket,{gen_tcp,#Port<0.1361>,tls_connection,<0.746.0>},<0.1097.0>} :  closed
+2019-06-03 16:34:14.061 [error] <0.1078.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [info] <0.1088.0>@endpoint_sender_genserver:terminate:132 terminating <0.1088.0> because of normal
+2019-06-03 16:34:14.061 [info] <0.1098.0>@endpoint_meta_data:get_endpoint_meta_for_ip:9 get endpoint meta for given ip:{192,168,24,16}
+2019-06-03 16:34:14.061 [info] <0.1090.0>@endpoint_sender_genserver:terminate:132 terminating <0.1090.0> because of normal
+2019-06-03 16:34:14.061 [info] <0.1098.0>@se_endpoint_handler_ranch_protocol:remove_sender_process:129 going to stop "endpoint_sender_24"
+2019-06-03 16:34:14.061 [error] <0.1082.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [info] <0.1099.0>@endpoint_sender_genserver:terminate:132 terminating <0.1099.0> because of normal
+2019-06-03 16:34:14.061 [error] <0.1084.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [error] <0.1098.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
+2019-06-03 16:34:14.061 [error] <0.1080.0> Ranch listener se_endpoint_handler terminated with reason: connection_closed
