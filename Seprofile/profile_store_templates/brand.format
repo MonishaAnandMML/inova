@@ -1,0 +1,24 @@
+{
+ {<<"ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+  [{<<"Brand Name">>, json_map, string, {}},
+   {<<"Brand Short Code">>, json_map, string, {}},
+   {<<"Logo">>, default, "missing", {}},
+   {<<"Art">>, default, "missing", {}},
+   {<<"Pinblock Format">>, json_map, string, {}},
+   {<<"Pin Truncation">>, json_map, atom, {}},
+   {<<"Track 1 Format" >>, json_map, string, {}},
+   {<<"Track 2 Format">>, json_map, string, {}},
+   {<<"Track 3 Format">>, json_map, string, {}},
+   {<<"Chip data Standard">>, json_map, string, {}},
+   {<<"Expiry Date Format">>, json_map,string, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+ ]
+}.

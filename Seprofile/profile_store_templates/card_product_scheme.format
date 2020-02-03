@@ -1,0 +1,6 @@
+{
+ {<<"ID">>, json_map, binary, {nopad, 0, <<"0">>}}, 
+ [{<<"Card Product Scheme Name">>, json_map, string, {}},
+ {<<"Card Product Scheme Short Code">>, json_map, string, {}},
+ {<<"Platform">>, json_map, string, {}}]
+}.

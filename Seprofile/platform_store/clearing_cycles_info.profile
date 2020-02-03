@@ -1,0 +1,366 @@
+%{Newtwork_Id,{day ,[Cyclename,StartTime,WindowDuration,CutOff,ClearingType]}.
+
+{<<"1">>,[
+{monday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}]]},
+
+{tuesday,[
+          [{cyclename,"C2"},
+           {start_time,"15:30"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}],
+          [{cyclename,"C1"},
+	       {start_time,"7:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}]]},
+
+{wednesday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{thursday,[
+          [{cyclename,"C1"},
+	       {start_time,"6:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{friday,[
+          [{cyclename,"C1"},
+	       {start_time,"10:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}],
+                     [{cyclename,"C3"},
+                      {start_time,"21:00"},
+                      {window_duration,120},
+                      {cut_off,15},
+                      {clearing_type,"secondary"}]]},
+
+{saturday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{sunday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]}
+]}.
+
+{<<"2">>,[
+{monday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{tuesday,[
+          [{cyclename,"C1"},
+	       {start_time,"7:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}]]},
+
+{wednesday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{thursday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{friday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{saturday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{sunday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]}
+]}.
+
+{<<"3">>,[
+{monday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}]]},
+
+{tuesday,[
+          [{cyclename,"C2"},
+           {start_time,"15:30"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}],
+          [{cyclename,"C1"},
+	       {start_time,"7:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}]]},
+
+{wednesday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{thursday,[
+          [{cyclename,"C1"},
+	       {start_time,"6:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{friday,[
+          [{cyclename,"C1"},
+	       {start_time,"10:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}],
+                     [{cyclename,"C3"},
+                      {start_time,"21:00"},
+                      {window_duration,120},
+                      {cut_off,15},
+                      {clearing_type,"secondary"}]]},
+
+{saturday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{sunday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]}
+]}.
+
+{<<"4">>,[
+{monday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}]]},
+
+{tuesday,[
+          [{cyclename,"C2"},
+           {start_time,"15:30"},
+           {window_duration,120},
+           {cut_off,30},
+           {clearing_type,"secondary"}],
+          [{cyclename,"C1"},
+	       {start_time,"7:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}]]},
+
+{wednesday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{thursday,[
+          [{cyclename,"C1"},
+	       {start_time,"6:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{friday,[
+          [{cyclename,"C1"},
+	       {start_time,"10:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}],
+                     [{cyclename,"C3"},
+                      {start_time,"21:00"},
+                      {window_duration,120},
+                      {cut_off,15},
+                      {clearing_type,"secondary"}]]},
+
+{saturday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]},
+
+{sunday,[
+          [{cyclename,"C1"},
+	       {start_time,"8:00"},
+           {window_duration,60},
+           {cut_off,30},
+           {clearing_type,"primary"}],
+          [{cyclename,"C2"},
+           {start_time,"16:00"},
+           {window_duration,120},
+           {cut_off,15},
+           {clearing_type,"secondary"}]]}
+]}.
+
+{financial_year, {"20190401","20200331"}}.
+
+{clearing_holiday_list,["20190417","20190927","20191214"]}.
+
+{settlement_holiday_list,["20190417","20190927","20191214"]}.

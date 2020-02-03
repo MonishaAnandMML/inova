@@ -1,0 +1,13 @@
+{{<<"fee_rate_id">>,json_map,integer,{}},
+{<<"unit_rate">>,json_map,integer,{}},
+{<<"basis_points">>,json_map,string,{}},
+{<<"flat_rate">>,json_map,integer,{}}}.
+
+
+
+
+
+
+
+
+

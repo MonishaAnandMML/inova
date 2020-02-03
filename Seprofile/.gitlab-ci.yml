@@ -1,0 +1,38 @@
+stages:
+  - eunit
+  - upload
+
+Eunit-tests:
+  stage: eunit
+  only:
+    - Development
+  script:
+    - rm -rf ~/profile_tmp
+    - mkdir ~/profile_tmp
+    - sh -x pre_compile.sh
+    - rebar3 eunit | tee ~/profile_tmp/SE-PROFILE-Eunit-$CI_BUILD_REF_NAME-${CI_COMMIT_SHA:0:8}.$(date +%F)
+    - rebar3 cover -v | tee -a ~/profile_tmp/SE-PROFILE-Eunit-$CI_BUILD_REF_NAME-${CI_COMMIT_SHA:0:8}.$(date +%F)
+  tags:
+    - se-runner
+
+Upload Reports:
+  stage: upload
+  only:
+    - Development
+  when: always
+  script:
+    - cd ~/profile_tmp/
+    - mkdir se_profile-eunit_${CI_COMMIT_SHA:0:8}.$(date +%F-%H:%M)
+    - cd se_profile-eunit*
+    - git init
+    - git remote add origin git@gitlab.com:Payments_Innova/se_eunits_reports.git
+    - git pull origin master
+    - rm -rf SE-PROFILE*
+    - cp ../SE-PROFILE-Eunit-$CI_BUILD_REF_NAME-${CI_COMMIT_SHA:0:8}.$(date +%F) .
+    - git add --all
+    - git commit -am "Adding SE_Profile Reports"
+    - git push -f origin master
+  after_script:
+    - sudo rm -rf ~/profile_tmp
+  tags:
+    - se-runner

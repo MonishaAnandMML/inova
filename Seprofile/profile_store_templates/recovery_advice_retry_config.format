@@ -1,0 +1,5 @@
+{{<<"NetworkID">>, json_map, binary, {nopad, 0, <<"0">>}},
+{<<"SE_ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+{<<"TranType">>, json_map, atom, {}},
+{<<"Interval_in_millies">>, json_map, spllist, {}}
+}.

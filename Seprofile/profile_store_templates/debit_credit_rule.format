@@ -1,0 +1,12 @@
+{{<<"rule_ID">>,json_map,integer,{}},
+{<<"debit_From">>,json_map,string,{}},
+{<<"creditTo">>,json_map,string,{}}}.
+
+
+
+
+
+
+
+
+

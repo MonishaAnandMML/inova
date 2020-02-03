@@ -1,0 +1,19 @@
+{
+ {<<"ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+  [{<<"Network Name">>, json_map, string, {}},
+   {<<"Network Short Code">>, json_map, string, {}},
+   {<<"Not Allowed Countries">>, json_map, spllist, {}},
+   {<<"Default Currency">>, json_map, binary, {nopad, 0, <<"0">>}},
+   {<<"Margin Percentage">>, json_map, float, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+ ]
+}.

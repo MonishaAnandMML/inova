@@ -1,0 +1,9 @@
+{{<<"feeGroupID">>,json_map,integer,{}},
+{<<"feeGroupType">>,json_map,string,{}},
+{<<"feeCategory">>,json_map,atom,{}},
+{<<"feeCode">>,json_map,string,{}},
+{<<"feeName">>,json_map,string,{}},
+{<<"basisAmount">>,json_map,binary,{nopad,0,<<"0">>}},
+{<<"feeRulePriority">>,json_map,spllist,{}}}.
+
+

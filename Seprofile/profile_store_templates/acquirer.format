@@ -1,0 +1,16 @@
+{
+ {<<"ID">>, json_map, binary, {lpad, 6, <<"0">>}},
+  [{<<"Country of Acquiring">>, json_map, binary, {lpad, 3, <<"0">>}},
+   {<<"Default Transaction Currency">>, json_map, binary, {lpad, 3, <<"0">>}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+ ]
+}.
+

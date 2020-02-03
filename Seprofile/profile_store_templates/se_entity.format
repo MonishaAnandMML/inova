@@ -1,0 +1,38 @@
+{
+ {<<"ID">>, json_map, binary, {lpad, 12, <<"0">>}},
+  [{<<"Entity Name">>, json_map, string, {}},
+   {<<"Legal Address">>, json_map, string, {}},
+   {<<"Country">>, json_map, binary, {lpad, 3, <<"0">>}},
+   {<<"Address1">>, json_map, string, {}},
+   {<<"Official Website">>, json_map, string, {}},
+   {<<"Processing Capacity Limit">>, json_map, integer, {}},
+   {<<"Opt for SDCM">>, json_map, atom, {}},
+   {<<"Authorised Signatory">>, json_map_list,
+    [{
+      {<<"First Name">>, json_map, string, {}},
+      {<<"Designation">>, json_map, string, {}},
+      {<<"Department">>, json_map, string, {}},
+      {<<"Contact No">>, json_map, string, {}},
+      {<<"Email">>, json_map, string, {}}
+    }], {}},
+  {<<"Contacts">>, json_map_list,
+   [{
+     {<<"First Name">>, json_map, string, {}},
+     {<<"Designation">>, json_map, string, {}},
+     {<<"Department">>, json_map, string, {}},
+     {<<"Contact No">>, json_map, string, {}},
+     {<<"Email">>,  json_map, string, {}}
+   }], {}},
+   {<<"Default Currency">>, json_map, binary, {nopad, 0, <<"0">>}},
+   {<<"Margin Percentage">>, json_map, float, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+ ]
+}.

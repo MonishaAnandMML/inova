@@ -1,0 +1,17 @@
+{
+ {<<"ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+  [{<<"Processor Name">>, json_map, string, {}},
+   {<<"Country of Processing">>, json_map, string, {}},
+   {<<"Endpoint Preference List">>, json_map, spllist, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+ ]
+}.
+

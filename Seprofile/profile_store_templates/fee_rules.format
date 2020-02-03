@@ -1,0 +1,24 @@
+{{<<"feeRuleID">>,json_map,integer,{}},
+{<<"Conditions">>, json_map_list,
+[{
+
+
+{<<"source">>,json_map,string,{}},
+{<<"element">>,json_map,string,{}},
+{<<"tag">>,json_map,binary,{nopad,0,<<"0">>}},
+{<<"operator">>,json_map,string,{}},
+{<<"Value">>,json_map,string,{}}
+
+}],
+{}},
+{<<"fee_rate_id">>,json_map,integer,{}},
+{<<"debitcreditID">>,json_map,integer,{}}}.
+
+
+
+
+
+
+
+
+

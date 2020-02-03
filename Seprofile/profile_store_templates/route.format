@@ -1,0 +1,32 @@
+{
+ {<<"ID">>, json_map, binary, {lpad, 6, <<"0">>}}, 
+  [{<<"Route ID Type">>, json_map, atom, {}},
+   {<<"Routing Priority">>, json_map, integer, {}},
+   {<<"Routing Method">>, json_map, string, {}},
+   {<<"Base Route ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+   {<<"SE ID">>, json_map, binary, {lpad, 12, <<"0">>}},
+  % {<<"Current Diversion Threshold">>, json_map, binary, {nopad, 0, <<"0">>}},
+  % {<<"Processing Capacity Limit">>, json_map,binary, {nopad, 0, <<"0">>}},
+   {<<"Networks">>, json_map_list, 
+    [{
+      {<<"Network ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+       [{<<"Supported Transactions">>, json_map, spllist, {}},
+	{<<"Supported Merchent Category Codes">>, json_map, spllist, {}},
+	{<<"Processor ID">>, json_map, binary, {nopad, 0, <<"0">>}},
+	{<<"Business Zone Code">>, json_map, spllist, {}},
+	{<<"Opted Business Services">>, json_map, string, {}}
+       ]
+     }], {}},
+   {<<"Assured Transaction Response">>, json_map, atom, {}},
+   {<<"Not Receive Forward Referrals">>, json_map, atom, {}},
+   {<<"effective_datetimestamp">>, json_map, string, {}},
+   {<<"is_active">>, json_map, string, {}},
+   {<<"is_blocked">>, json_map, string, {}},
+   {<<"is_deleted">>, json_map, string, {}},
+   {<<"activation_datetimestamp">>, default, string, {}},
+   {<<"submitted_datetimestamp">>, json_map, string, {}},
+   {<<"updated_datetimestamp">>, json_map, string, {}},
+   {<<"deleted_datetimestamp">>, json_map, string, {}},
+   {<<"expiry_datetimestamp">>, json_map, string, {}}
+  ]
+}.
