@@ -1,21 +1,3 @@
-********************************************************************************
-		Steps to be followed for vault and consul usage:
-********************************************************************************
-
-1. Clone/pull Infrastructure project.
-3. Run following commands in Vault_and_consul of Infrastructure project
-   sh vault_and_consul_setup.sh
-   sh vault_and_consul_start.sh 
-4. Run command to generate unseal key and root token by
-   sh vault_key_gen.sh
-   (store the output as its needed to proceed further)
-5. Run command to create se_platform secrets with values loaded
-   sh se_platform_secrets.sh <unseal_key>
-   if command asks password enter the root token(<root_token>)
-4. To get role_id and secret_id for se_services, se_endpoint_handler and se_message_processor run
-   sh vault_get_secret_id.sh <unseal_key>
-   if command asks password enter the root token(<root_token>)
-   Paste the role_id and secret_id in sys.config of the application for which these are generated and then run the application i.e se_services, se_endpoint_handler and se_message_processor.
-
-5. If anyone want to unseal the vault then run following cmd :
-   sh vault_unseal <unseal_key>
+version https://git-lfs.github.com/spec/v1
+oid sha256:fde404e4a5dc482cceb9dc69ee1722db27a55756239f57e1cde1ab0a3a3cdf79
+size 1181
