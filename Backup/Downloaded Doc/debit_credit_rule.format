@@ -1,0 +1,4 @@
+{{<<"debitcreditrule_id">>,json_map,binary,{nopad,0,<<"0">>}},
+[{<<"debit_from">>,json_map,atom,{}},
+{<<"credit_to">>,json_map,atom,{}}]}.
+

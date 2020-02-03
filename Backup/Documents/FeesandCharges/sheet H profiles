@@ -1,0 +1,31 @@
+
+{2195, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+ {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"6011">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {161,8}
+   ]
+}.  
+
+{2196, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+ {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"6010">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {163,8}
+   ]
+}. 
+
+
+{2197, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+    {se_ctx, se_data_elements, <<"ProcessingCodeTranType">>, in_list,[<<"1">>,<<"01">>},
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"6011">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, not_in_list, [<<"0">>, <<"951">>] }],
+   {164,8}
+   ]
+}
+
+

@@ -1,0 +1,23 @@
+Unseal Key 1: QiJjvnWXd2YhzWqWfoLCXlwfpCNSSGK2vfscQT0336s=
+
+Initial Root Token: 7ilve0xM0WwmiCSr4tuO2bAn
+
+Vault initialized with 1 key shares and a key threshold of 1. Please securely
+distribute the key shares printed above. When the Vault is re-sealed,
+restarted, or stopped, you must supply at least 1 of these keys to unseal it
+before it can start servicing requests.
+
+Vault does not store the generated master key. Without at least 1 key to
+reconstruct the master key, Vault will remain permanently sealed!
+
+It is possible to generate new unseal keys, provided you have a quorum of
+existing unseal keys shares. See "vault operator rekey" for more information.
+
+    {app_role_id, <<"aae30112-ecaf-e523-8b24-98afad504460">>},
+    {app_secret_id, <<"bccb56d5-4986-2300-be6e-98bea51980da">>},
+
+   {app_role_id, <<"90e193c9-058e-5cfc-b7ce-d887ccd26953">>},
+    {app_secret_id, <<"21041d38-905c-33df-346b-f16e9766a60e">>}
+
+    {app_role_id, <<"37268e34-8a31-7aff-de15-e065ab6c9d38">>},
+    {app_secret_id, <<"d9226651-de80-88db-ce9e-cd0824846828">>},

@@ -1,0 +1,14 @@
+1. rm -rf _build
+2.rebar3 unlock
+3.sh pre_compile.sh
+4.rebar3 compile
+5.rebar3 release
+6. check if riak is running sudo riak ping< start using sudo riak start if not running>
+7. Bring up ThalesConsoleSimulator.exe
+
+_build/default/rel/se_services/bin/se_services console
+_build/default/rel/se_endpoint_handler/bin/se_endpoint_handler console
+_build/default/rel/se_message_processor/bin/se_message_processor console
+_build/default/rel/balance_checker/bin/balance_checker console
+_build/default/rel/se_sweep_replayer/bin/se_sweep_replayer console
+_build/default/rel/settlement_date_mgr/bin/settlement_date_mgr console

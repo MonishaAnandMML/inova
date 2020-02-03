@@ -1,0 +1,76 @@
+
+
+
+Network1 :BanAxcpt
+Brand: MasterCard
+Card Product Name: Danske MasterCard Exclusive
+Card Product Id : 234001
+
+SEID : DABA-DK-KK
+Account Range Label : Danske MasterCard Exclusive
+
+Base RouteID : 800001
+Base Endpoint :192.168.10.2 ; Endpoint Id :1; Processing ID : 1
+ATM Endpoint :192.168.11.3; Endpoint Id :2 ;Processing ID : 2
+Pin Endpoint :192.168.12.4 ; Endpoint Id :3  ; Processing ID : 3
+
+PAN ID : 222011000000-222011999999
+
+
+
+Acquirer
+SEID : CITI-DK-KK
+Route : 800006
+Endpoint Id : 192.168.19.11 ; Endpoint Id :10;Processing ID : 10
+
+
+Network2 : Dankort
+Brand: Dankort, VISA
+
+
+Issuer1- Nordea
+SEID : DABA-DK-KK
+Base Route: 800002
+
+Account Range Label : Danske VISA Classic
+Card Product Id : 234002
+Base Endpoint :192.168.13.5 ; Endpoint Id :4 ;Processing ID : 4
+ATM Endpoint :192.168.14.6; Endpoint Id :5  ;Processing ID : 5
+PAN ID : 22202200000-222022999999
+
+Account Range Label : Danske Dankort Classic
+Card Product Id : 234003
+DKRT Endpoint :192.168.15.7; Endpoint Id :6 ; Processing ID : 6
+Account Range  : 222033000000 - 222033999999
+
+
+Issuer2-Nordea
+
+SEID : PUBL-DK-KK
+Account Range Label : Nordea Dankort Exclusive
+Card Product Id : 234004
+Base Route: 800003
+
+Base Endpoint :192.168.16.8 ; Endpoint Id :7 ;Processing ID : 7
+Account Range  : 222044000000 - 222044999999
+
+Account Range Label : Nordea VISA Exclusive
+Card Product Id : 234005
+VISA Endpoint :192.168.17.9; Endpoint Id :8  ;Processing ID :8
+Account Range  : 222055000000 - 222055999999
+
+
+
+Acquirer1
+SEID : CITI-DK-KK
+Route : 800007
+Endpoint Id : 192.168.20.12 ; Endpoint Id :11;Processing ID : 11
+
+
+
+Acquirer2 : 
+SEID : ALMB-DK-KK
+Route : 800008
+Endpoint Id : 192.168.21.13 ; Endpoint Id :12; Processing ID : 12
+
+

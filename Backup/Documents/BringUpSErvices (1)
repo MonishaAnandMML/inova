@@ -1,0 +1,106 @@
+1. rm -rf _build
+2.rebar3 unlock
+3.sh pre_compile.sh
+4.rebar3 compile
+5.rebar3 release
+6. check if riak is running sudo riak ping< start using sudo riak start if not running>
+7. Bring up ThalesConsoleSimulator.exe
+
+_build/default/rel/se_services/bin/se_services console
+_build/default/rel/se_endpoint_handler/bin/se_endpoint_handler console
+_build/default/rel/se_message_processor/bin/se_message_processor console
+_build/default/rel/balance_checker/bin/balance_checker console
+_build/default/rel/se_sweep_replayer/bin/se_sweep_replayer console
+_build/default/rel/settlement_date_mgr/bin/settlement_date_mgr console
+_build/default/rel/clearing_date_and_cycle_creation/bin/clearing_date_and_cycle_creation console
+_build/default/rel/activity_limit_setter/bin/activity_limit_setter console
+
+python3.4 Infrastructure/Docker_Platform/developer_desktop.py
+
+
+clean the buckets:
+
+se_create_fresh_env:reset_se_env().
+
+git reset --hard bd0d2e5f4322f094277bb43cecaf4046ece67f4e
+
+docker container exec -it services0.smartedge.com bash
+[root@services0 /]# /opt/se_platform/_build/default/rel/se_services/bin/se_services attach
+Attaching to /tmp/erl_pipes/services@services0.smartedge.com/erlang.pipe.1 (^D to exit)
+
+
+CVV:
+
+rr(cvv).
+WorkerPid = pooler:take_member(hsm_pool).
+gen_server:call(WorkerPid, {generate_CVK_pair, #hsm_param {hsm = 1, value = [{delimeter, <<";">>}, {reserved, <<"0">>}, {lmk_key_scheme, <<"0">>},{key_check_value_type, <<"0">>}]}}).
+
+gen_server:call(WorkerPid, {generate_VISA_CVV, #hsm_param {hsm = 1, value = [{cvk_value, <<"XADF03FD74A8300DAA8E16DD7600569C5">>}, {primary_account_number, <<"5346800029211591">>}, {delimeter, <<";">>}, {expiration_date, <<"2206">>}, {service_code, <<"003">>}]}}).
+
+gen_server:call(WorkerPid, {verify_VISA_CVV, #hsm_param {hsm = 1, value = [{cvk_value, <<"XADF03FD74A8300DAA8E16DD7600569C5">>}, {cvv_value, <<"167">>}, {primary_account_number, <<"5346800029211591">>}, {delimeter, <<";">>}, {expiration_date, <<"2206">>}, {service_code, <<"003">>}]}}).
+
+_build/default/lib/se_profile
+rm -rf _build/default/rel
+rebar3 clean -a
+
+rebar3 release
+
+systemctl status kafka
+systemctl stop kafka
+systemctl start kafka
+
+sqlite>.header on
+sqlite>.mode column
+sqlite> SELECT * FROM COMPANY;
+BEGIN TRANSACTION;
+
+
+INSERT INTO mydb.CardResponse values(9, 2220880000000005, '000', 'CardProduct4' )
+   ...> ;
+
+COMMIT;
+
+
+SQLITE 3 Procedure
+cd /opt/CucumberConcept/resources
+sqlite3
+attach database 'cucumberDB.sqlite'as db1;
+.database
+.tables
+select * from CardResponse;
+
+---  ---------------  ----------------------------------------------------------
+0    main                                                                       
+2    db1              /opt/CucumberConcept/resources/cucumberDB.sqlite          
+sqlite> .tables
+db1.CardResponse
+sqlite> select * from CardResponse;
+1|2220118912341518|000|INVALID
+2|2220118912341526|100|
+3|2220118912341542|924|
+4|2220228912341515|907|INVALID
+5|2220118912341549|104|
+6|2220228912341523|000|TOUT
+7|2220228912341531|907|
+8|2220228912341540|000|
+
+
+
+grep -inr received se_services.log | grep 45619087221402600000743
+ets:lookup('fee_rules.profile',1925).
+
+
+
+
+Docker platform 
+
+docker container exec -it services0.smartedge.com bash
+/opt/se_platform/_build/default/rel/se_services/bin/se_services stop
+/opt/se_platform/_build/default/rel/se_services/bin/se_services console
+/opt/se_platform/_build/default/rel/se_services/bin/se_services start
+s
+
+sudo chown -R innova:innova ~/se_log_dir
+
+ 
+

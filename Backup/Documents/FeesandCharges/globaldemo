@@ -1,0 +1,68 @@
+{1901, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123006">>}],
+   {102,8}
+   ]
+}.  
+
+{1902, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>}],
+   {102,8}
+   ]
+}.  
+
+{1903, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123003">>}],
+   {102,8}
+   ]
+}.  
+
+{1904, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>}],
+   {102,8}
+   ]
+}.
+  
+{1905, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123002">>}],
+   {102,8}
+   ]
+}.  
+
+{1906, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123001">>}],
+   {102,8}
+   ]
+}.  
+
+
+{1907, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123001">>}],
+   {102,8}
+   ]
+}.  
+
+
+
+
+

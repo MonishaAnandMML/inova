@@ -1,0 +1,566 @@
+
+-define(EXPTD_MEMBER_PROFILE_WITH_ACC_ID_2, #{<<"AccountRange">> => <<"2">>,<<"AcqSeEntyID">> => <<"PQRBKABL001">>,
+                                              <<"AcquirerRouteID">> => <<"900004">>,
+                                              <<"CardProductId">> => <<"123002">>,
+                                              <<"DestPid">> => <<"2">>,<<"DestSeEntityID">> => <<"XYZBKABL001">>,
+                                              <<"Destination">> => issuer,
+                                              <<"IssuerSeEntityId">> => <<"XYZBKABL001">>,
+                                              <<"NetworkID">> => <<"1">>,
+                                              <<"ResolvedDestinationRoutId">> => <<"900002">>,
+                                              <<"ResolvedSourceRoutId">> => <<"900004">>,
+                                              <<"Source">> => acquirer,
+                                              <<"SourceEndpointID">> => <<"11">>,
+                                              <<"SourceSeEntityId">> => <<"PQRBKABL001">>,
+                                              <<"Source_Pid">> => <<"4">>}).
+
+
+
+
+
+get_final_transaction_classification_list(TransactionClassificationLookupTuple) ->
+  ?SE_LOG(debug, "TransactionClassificationLookupTuple =~p", [TransactionClassificationLookupTuple]),
+
+  case TransactionClassificationLookupTuple of
+    { purchase_req, 'X', no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data },100];
+
+    { purchase_req, 'X', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FB_CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data }, 200];
+
+    { purchase_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 300];
+
+    { purchase_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 400];
+
+    { purchase_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 500];
+
+    { purchase_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 600];
+
+    { purchase_req, 'X', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 700];
+
+    { purchase_req, 'A', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 800];
+
+    { purchase_req, 'H', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 900];
+
+    { purchase_req, 'X2', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1000];
+
+    { purchase_req, 'F', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1100];
+
+    { purchase_req, _, avs_Data, _, _, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM', 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1200];
+
+    { purchase_req, _, avs_Data, _, _, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM', 'SECURED', 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1300];
+
+    { purchase_req, _, avs_Data, _, _, 'N0_AMOUNT', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1400];
+
+    { purchase_req, _, no_avs_Data, _, _, 'RECURRING', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1500];
+
+    { purchase_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM' },
+       { purchase, ToAccount, no_pin_data }, 1600];
+
+    { purchase_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM', 'SECURED' },
+       { purchase, ToAccount, no_pin_data }, 1700];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1800];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1900];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2000];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2100];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'MICROATM' },
+       { purchase, ToAccount, pin_data }, 2200];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2300];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2400];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2500];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2600];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2700];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 2800];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase,'PIN','AFD' },
+       { purchase, ToAccount, pin_data }, 2900];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 3000];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3100];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 3200];
+
+    { purchase_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3300];
+
+    { purchase_req, _, no_avs_Data, track_data, _, 'ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3400];
+
+    { purchase_req, _, no_avs_Data, track_data, _, 'MAG_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3500];
+
+    { purchase_req, _, no_avs_Data, track_data, _, 'CHIP_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3600];
+
+    { purchase_req, _, no_avs_Data, _, _, 'CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, no_data_available }, 3700];
+
+    { purchase_req, _, no_avs_Data, track_data, _, 'MAG_CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, pin_data }, 3800];
+
+    { purchase_auth_req, 'X', no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data },100];
+
+    { purchase_auth_req, 'X', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FB_CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data }, 200];
+
+    { purchase_auth_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 300];
+
+    { purchase_auth_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 400];
+
+    { purchase_auth_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 500];
+
+    { purchase_auth_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 600];
+
+    { purchase_auth_req, 'X', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 700];
+
+    { purchase_auth_req, 'A', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 800];
+
+    { purchase_auth_req, 'H', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 900];
+
+    { purchase_auth_req, 'X2', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1000];
+
+    { purchase_auth_req, 'F', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1100];
+
+    { purchase_auth_req, _, avs_Data, _, _, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1200];
+
+    { purchase_auth_req, _, avs_Data, _, _, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1300];
+
+    { purchase_auth_req, _, avs_Data, _, _, 'N0_AMOUNT', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1400];
+
+    { purchase_auth_req, _, no_avs_Data, _, _, 'RECURRING', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1500];
+
+    { purchase_auth_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM' },
+       { purchase, ToAccount, no_pin_data }, 1600];
+
+    { purchase_auth_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM', 'SECURED' },
+       { purchase, ToAccount, no_pin_data }, 1700];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1800];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1900];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2000];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2100];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'MICROATM' },
+       { purchase, ToAccount, pin_data }, 2200];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2300];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2400];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2500];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2600];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2700];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 2800];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase,'PIN','AFD' },
+       { purchase, ToAccount, pin_data }, 2900];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 3000];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3100];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 3200];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3300];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, _, 'ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3400];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, _, 'MAG_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3500];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, _, 'CHIP_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3600];
+
+    { purchase_auth_req, _, no_avs_Data, _, _, 'CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, no_data_available }, 3700];
+
+    { purchase_auth_req, _, no_avs_Data, track_data, _, 'MAG_CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, pin_data }, 3800];
+
+    { purchase_adv_req, 'X', no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data },100];
+
+    { purchase_adv_req, 'X', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FB_CHIP', 'PIN', 'AIRLINE' },
+       { purchase, ToAccount, pin_data }, 200];
+
+    { purchase_adv_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 300];
+
+    { purchase_adv_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 400];
+
+    { purchase_adv_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_MAILORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 500];
+
+    { purchase_adv_req, 'T', no_avs_Data, no_track_data, no_pin_data, 'KEYENTRY_TELEORDER', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MOTO' },
+       { purchase, ToAccount, no_pin_data }, 600];
+
+    { purchase_adv_req, 'X', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 700];
+
+    { purchase_adv_req, 'A', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 800];
+
+    { purchase_adv_req, 'H', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 900];
+
+    { purchase_adv_req, 'X2', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1000];
+
+    { purchase_adv_req, 'F', no_avs_Data, _, _, _, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'TandE' },
+       { purchase, ToAccount, no_data_available }, 1100];
+
+    { purchase_adv_req, _, avs_Data, _, _, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1200];
+
+    { purchase_adv_req, _, avs_Data, _, _, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ACVS' },
+       { purchase, ToAccount, no_data_available }, 1300];
+
+    { purchase_adv_req, _, avs_Data, _, _, 'N0_AMOUNT', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1400];
+
+    { purchase_adv_req, _, no_avs_Data, _, _, 'RECURRING', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AVS' },
+       { purchase, ToAccount, no_data_available }, 1500];
+
+    { purchase_adv_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM' },
+       { purchase, ToAccount, no_pin_data }, 1600];
+
+    { purchase_adv_req, _, no_avs_Data, no_track_data, no_pin_data, 'ECOM_SECURE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'ECOM', 'SECURED' },
+       { purchase, ToAccount, no_pin_data }, 1700];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1800];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 1900];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2000];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2100];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'PIN', 'MICROATM' },
+       { purchase, ToAccount, pin_data }, 2200];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2300];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_PHYSICAL_DELIVERY', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2400];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 2500];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_OFFPREMISE_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN', 'UNATTN' },
+       { purchase, ToAccount, pin_data }, 2600];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'FALLBACK', 'CHIP', 'PIN' },
+       { purchase, ToAccount, pin_data }, 2700];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 2800];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase,'PIN','AFD' },
+       { purchase, ToAccount, pin_data }, 2900];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'UNKWN_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'PIN' },
+       { purchase, ToAccount, pin_data }, 3000];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3100];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN', 'AFD' },
+       { purchase, ToAccount, pin_data }, 3200];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, pin_data, 'MAG_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'PIN' },
+       { purchase, ToAccount, pin_data }, 3300];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, _, 'ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3400];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, _, 'MAG_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'MAG', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3500];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, _, 'CHIP_ONPREMISE_UNATTN_FUEL', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'CHIP', 'AFD' },
+       { purchase, ToAccount, no_data_available }, 3600];
+
+    { purchase_adv_req, _, no_avs_Data, _, _, 'CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, no_data_available }, 3700];
+
+    { purchase_adv_req, _, no_avs_Data, track_data, _, 'MAG_CONTACTLESS', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { purchase, 'NFC' },
+       { purchase, ToAccount, pin_data }, 3800];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'CHIP', 'PIN' },
+       { cash, ToAccount, pin_data }, 3900];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'CHIP', 'PIN', 'MICROATM' },
+       { cash, ToAccount, pin_data }, 4000];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'FALBACK', 'CHIP', 'PIN' },
+       {cash, ToAccount, pin_data }, 4100];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash,'FALBACK','CHIP','PIN','MICROATM' },
+       { cash, ToAccount, pin_data }, 4200];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'PIN' },
+       { cash, ToAccount, pin_data }, 4300];
+
+    { cash_req, 'Z', no_avs_Data, track_data, pin_data, 'MAG_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'PIN', 'MICROATM' },
+       { cash, ToAccount, pin_data }, 4400];
+
+    { cash_req, 'C', no_avs_Data, no_track_data, no_pin_data, 'DEF_CARD_PRESENT', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'MANUAL' },
+       { cash, ToAccount, pin_data }, 4500];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'CHIP', 'PIN' },
+       { cash, ToAccount, pin_data }, 3900];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'CHIP', 'PIN', 'MICROATM' },
+       { cash, ToAccount, pin_data }, 4000];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'FALBACK', 'CHIP', 'PIN' },
+       {cash, ToAccount, pin_data }, 4100];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'FALLBACK_CHIP_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash,'FALBACK','CHIP','PIN','MICROATM' },
+       { cash, ToAccount, pin_data }, 4200];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'MAG_PIN_ONPREMISE', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'PIN' },
+       { cash, ToAccount, pin_data }, 4300];
+
+    { cash_auth_req, 'Z', no_avs_Data, track_data, pin_data, 'MAG_PIN_AT_CARDMEMEBER_UNATTN', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'PIN', 'MICROATM' },
+       { cash, ToAccount, pin_data }, 4400];
+
+    { cash_auth_req, 'C', no_avs_Data, no_track_data, no_pin_data, 'DEF_CARD_PRESENT', _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { cash, 'MANUAL' },
+       { cash, ToAccount, pin_data }, 4500];
+
+    { purchase_resp } ->
+      [TransactionClassificationLookupTuple, { },
+       {purchase, no_data_available, no_data_available}, 5100];
+
+    { purchase_auth_resp } ->
+      [TransactionClassificationLookupTuple, { },
+       {purchase, no_data_available, no_data_available}, 5200];
+
+    { purchase_rev_adv_req } ->
+      [TransactionClassificationLookupTuple, { },
+       {purchase, no_data_available, no_data_available}, 5300];
+
+    { purchase_rev_adv_resp } ->
+      [TransactionClassificationLookupTuple, { },
+       {purchase, no_data_available, no_data_available}, 5400];
+
+    { purchase_adv_resp } ->
+      [TransactionClassificationLookupTuple, { },
+       {purchase, no_data_available, no_data_available}, 5500];
+
+    { bill_payment_req, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { billpay },
+        { billpay, ToAccount, no_data_available }, 5600];
+
+    { bill_payment_resp, _, ToAccount } ->
+      [TransactionClassificationLookupTuple, { billpay },
+        { billpay, ToAccount, no_data_available }, 5700];
+
+    _Other ->
+      invalid_data
+  end.

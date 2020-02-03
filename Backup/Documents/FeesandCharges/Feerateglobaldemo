@@ -1,0 +1,8 @@
+%%%{fee_rate_id, [ unit, basis_point, flat, cap] }
+
+{101, [30, 2.25, se_na, se_na] }.
+{102, [0,  1.85, se_na, se_na] }.
+{103, [0,  1.65, se_na, se_na] }.
+{104, [15, 1.35, se_na, se_na] }.
+{105, [1500, se_na, se_na, se_na] }.
+

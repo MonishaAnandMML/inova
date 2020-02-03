@@ -1,0 +1,300 @@
+{2123, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {114,8}
+   ]
+}. 
+
+{2124, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123031">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {114,8}
+   ]
+}. 
+
+{2125, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123032">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {114,8}
+   ]
+}. 
+
+{2126, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123016">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {114,8}
+   ]
+}. 
+
+{2127, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123017">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+ 
+{2128, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+
+{2129, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {146,8}
+   ]
+}. 
+
+{2130, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123031">>},
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {146,8}
+   ]
+}. 
+
+{2131, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123032">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {146,8}
+   ]
+}. 
+
+{2132, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123016">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {146,8}
+   ]
+}. 
+
+{2133, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123017">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+
+{2134, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+ 
+
+{2135, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {143,8}
+   ]
+}. 
+
+{2136, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123031">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {143,8}
+   ]
+}. 
+
+{2137, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123032">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {143,8}
+   ]
+}. 
+
+{2138, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123016">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {143,8}
+   ]
+}. 
+
+{2139, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123017">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+
+{2140, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"0">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>}],
+   {102,8}
+   ]
+}. 
+
+
+{2141, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"AmountTransaction">>,  gt, 10000000000000000000000000000000000000},
+   {se_ctx, se_resolved_event_code, na,  equals, stip_approved},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>}],
+   {145,8}
+   ]
+}. 
+
+
+{2142, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"AmountTransaction">>,  gt, 10000000000000000000000000000000000000},
+   {se_ctx, se_resolved_event_code, na,  equals, stip_approved},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123032">>}],
+   {145,8}
+   ]
+}. 
+{2143, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"AmountTransaction">>,  gt, 10000000000000000000000000000000000000},
+   {se_ctx, se_resolved_event_code, na,  equals, stip_approved},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123016">>}],
+   {145,8}
+   ]
+}.
+
+{2144, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"AmountTransaction">>,  gt, 10000000000000000000000000000000000000},
+   {se_ctx, se_resolved_event_code, na,  equals, stip_approved},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123017">>}],
+   {102,8}
+   ]
+}. 
+
+{2145, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"AmountTransaction">>,  gt, 10000000000000000000000000000000000000},
+   {se_ctx, se_resolved_event_code, na,  equals, stip_approved},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>}],
+   {102,8}
+   ]
+}. 
+
+
+
+{2146, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"4900">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple, is_superset, ['ECOM']},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123004">>}],
+   {147,8}
+   ]
+}.  
+
+{2147, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"4900">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple, is_superset, ['ECOM']},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123031">>}],
+   {147,8}
+   ]
+}.  
+{2148, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"4900">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple, is_superset, ['ECOM']},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123032">>}],
+   {147,8}
+   ]
+}.  
+
+
+{2149, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"4900">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple, is_superset, ['ECOM']},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123017">>}],
+   {102,8}
+   ]
+}.  
+
+{2150, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, equals, <<"4900">>}, 
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple, is_superset, ['ECOM']},
+   {se_ctx, se_data_elements, <<"BusinessZoneCode">>, equals, <<"356001">>},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123005">>}],
+   {102,8}
+   ]
+}.  

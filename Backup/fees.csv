@@ -1,0 +1,24 @@
+,FCIFSCV1TC1VISAPurcResp                      ,2220880000000021,5411,20502,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1901,30,0
+,FCIFSCV1TC2VISAPurcResp                      ,2220880000000013,9751,99999,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1901,30,0
+,FCIFSCV1TC3VISAPurcResp                      ,2220880000000013,5411,10000,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1901,30,0
+,FCIFSCV1TC4VISAPurcResp                     ,2220880000000021,5541,25552,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1907,95,0
+    ,FCIFSCV1TC5VISAPurcResp                      ,2220880000000021,5200,20502,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,179,179
+,FCIFSCV1TC6VISAPurcResp                      ,2220880000000021,5211,10000,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,95,196
+,FCIFSCV1TC7VISAPurcResp                      ,2220880000000021,5231,12345,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,112,363
+,FCIFSCV1TC8VISAPurcResp                      ,2220880000000005,5251,27733,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,1072
+,FCIFSCV1TC9VISAPurcResp                      ,2220880000000005,5261,26373,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,1285
+,FCIFSCV1TC10VISAPurcResp                      ,2220880000000005,5271,76373,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,4450
+,FCIFSCV1TC11VISAPurcResp                      ,2220880000000013,5300,87783,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,5990
+,FCIFSCV1TC12VISAPurcResp                      ,2220880000000013,5309,44444,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,3489
+,FCIFSCV1TC13VISAPurcResp                      ,2220880000000013,5310,84899,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,7494
+,FCIFSCV1TC14VISAPurcResp                     ,2220880000000021,5411,73839,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,7260
+,FCIFSCV1TC15VISAPurcResp                     ,2220880000000021,5422,88999,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,9637
+,FCIFSCV1TC16VISAPurcResp                     ,2220880000000021,5331,88899,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,10516
+,FCIFSCV1TC17VISAPurcResp                     ,2220880000000005,5311,88886,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,11404
+,FCIFSCV1TC18VISAPurcResp                     ,2220880000000005,5399,88897,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,12296
+,FCIFSCV1TC19VISAPurcResp                     ,2220880000000005,5441,88908,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,13187
+,FCIFSCV1TC20VISAPurcResp                     ,2220880000000013,5451,88997,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,14092
+,FCIFSCV1TC21VISAPurcResp                     ,2220880000000013,5462,85578,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,14408
+,FCIFSCV1TC22VISAPurcResp                     ,2220880000000013,5499,66777,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,11918
+,FCIFSCV1TC23VISAPurcResp                     ,2220880000000013,5999,89998,TrackData1   ,TrackData2  ,PINData  ,SecData     ,356001,1903,30,16953
+    ,,,,,,,,,,,,

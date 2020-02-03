@@ -1,0 +1,18 @@
+
+Steps to be followed for vault and consul usage:
+
+1. Clone/pull se_dep_repo project.
+2. Copy vault_config and consul_config folders to home directory.
+3. Run following commands 
+   sh vault_and_consul_setup.sh
+   sh vault_and_consul_start.sh 
+4. Run command to generate unseal key and root token by
+   sh vault_key_gen.sh
+   (store the output as its needed to proceed further)
+5. Run command to create se_platform secrets with values loaded
+   sh se_platform_secrets.sh <unseal_key>
+   if command asks password enter the root token
+4. To get role_id and secret_id run
+   sh vault_get_secret_id.sh <unseal_key>
+   if command asks password enter the root token
+5. Paste the role_id and secret_id in sys.config of the application for which these are generated and then run the application i.e se_services, se_endpoint_handler and se_message_processor.

@@ -1,0 +1,27 @@
+create an issue for implementing fee cap for fee rates 
+  retail2 is considered as ECom Transactions
+  Recurring- Pos Code(Debt repayment) 
+  utilities - MCC 4900 
+  government - multiple mccs use in list
+
+ 
+Interchange rate & fee: 2.30% + $0.10
+
+Also known as:
+EIRF
+
+Electronic Interchange Reimbursement fee, or EIRF, is a Visa interchange category that indicates a downgrade. Transactions qualify for EIRF when they don’t meet the criteria for categories with lower rates. For example, a transaction that is keyed-in to a terminal without address verification information instead of being swiped may fall into the EIRF category. Call your processor if you see a lot of EIRF transactions on your statement because it’s a good indication that something is not being processed correctly.
+
+Qualification criteria:
+The EIRF interchange category does not apply to the following MCCs:
+
+·       5962 (Direct Marketing – Travel)
+
+·       5966 (Direct Marketing – Outbound)
+
+·       5967 (Direct Marketing – Inbound)
+
+Typical bundled qualification:
+EIRF is generally considered “non-qualified” for all businesses.
+
+

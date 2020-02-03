@@ -1,0 +1,12 @@
+1. rm -rf _build
+2.rebar3 unlock
+3.sh pre_compile.sh
+4.rebar3 compile
+5.rebar3 release
+
+
+Option 10 for restart platform
+Option 5 for full restart with riak
+
+ 
+

@@ -1,0 +1,20 @@
+
+purchase Txn : Interchange Fee
+
+CardProductId       unit, basis_point, flat, cap
+123006 -             30,  2.25,        
+123005 -              0,  1.85,
+123003                0,  1.85,  
+123004                0,  1.65,
+123002                0,  1.65,
+123001                15, 1.35,    
+
+
+  
+According to me :
+
+Purchase :
+src entity credit Desc entity debit
+
+Cash :
+src entity debit Desc entity credit  unit 1500

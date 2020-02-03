@@ -1,0 +1,13 @@
+
+{1950, 
+[
+   [{se_ctx, se_header, <<"NetworkID">>, equals, <<"1">>}, 
+   {se_ctx, se_data_elements, <<"MerchantCategoryCode">>, in_list, [<<"5411">>, <<"9751">>]}, 
+   {se_ctx, se_data_elements, <<"PosDataCodeCardPresent">>, equals, <<"1">>},
+   {se_ctx, se_data_elements, <<"ResponseCode">>, equals, <<"0">>},
+   {se_ctx, se_txn_tuple, resolved_tuple , is_superset, [purchase]},
+   {se_ctx, se_member_profile, <<"CardProductId">>, equals, <<"123006">>}],
+   {101,8}
+   ]
+
+}. 
